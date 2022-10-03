@@ -8,7 +8,7 @@
 import UIKit
 
 class BrowseBreedsView: UIView {
-  static let rowHeight: CGFloat = 128.0
+  static let rowHeight: CGFloat = 100
 
   @UsesAutoLayout
   private var activityIndicator: UIActivityIndicatorView = {
