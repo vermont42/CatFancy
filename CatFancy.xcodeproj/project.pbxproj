@@ -396,7 +396,6 @@
 		0317D0C328DFAB7400A4634C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				03101A5628E3A17900F7E42D /* BreedRequesterTests.swift */,
 				03101A5528E3A17900F7E42D /* BreedsURLTests.swift */,
 				03101A4F28E3A17900F7E42D /* BrowseBreedsDeleSourceTests.swift */,
 				03101A5428E3A17900F7E42D /* DictionaryGetterSetterTests.swift */,
@@ -412,6 +411,7 @@
 		0317D0C428DFAB7A00A4634C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				03101A5628E3A17900F7E42D /* BreedRequesterTests.swift */,
 				03101A3F28E39C9E00F7E42D /* ImageCacheLoaderTests.swift */,
 				03101A3E28E39C9E00F7E42D /* NSLayoutConstraintExtensionTests.swift */,
 				03101A4228E39C9E00F7E42D /* RealSoundPlayerTests.swift */,
