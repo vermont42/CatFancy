@@ -9,20 +9,9 @@
 import XCTest
 
 class BreedRequesterTests: XCTestCase {
-  func testRequestBreeds() {
-    Current.settings.breedsURL = .standard
-    let exp = expectation(description: "Loading breeds.")
-    BreedRequester.requestBreeds { breeds in
-      guard let breeds else {
-        XCTFail("No breeds were returned.")
-        return
-      }
-      let expectedCount = 14
-      XCTAssertEqual(expectedCount, breeds.count)
-      exp.fulfill()
-    }
-
-    let timeout: TimeInterval = 10.0
-    wait(for: [exp], timeout: timeout)
+  func testRequestBreeds() async {
+    let breeds = await BreedRequester.requestBreeds()
+    let expectedCount = 14
+    XCTAssertEqual(expectedCount, breeds?.count ?? 0)
   }
 }

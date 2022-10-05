@@ -19,12 +19,14 @@ class URLProtocolStub: URLProtocol {
   }
 
   override func startLoading() {
-    if let url = request.url {
-      if let data = URLProtocolStub.testURLs[url] {
-        self.client?.urlProtocol(self, didLoad: data)
-      }
+    if
+      let url = request.url,
+      let data = URLProtocolStub.testURLs[url]
+    {
+      client?.urlProtocol(self, didReceive: URLResponse(), cacheStoragePolicy: .notAllowed)
+      client?.urlProtocol(self, didLoad: data)
     }
-    self.client?.urlProtocolDidFinishLoading(self)
+    client?.urlProtocolDidFinishLoading(self)
   }
 
   override func stopLoading() {}

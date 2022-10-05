@@ -36,10 +36,8 @@ class BreedDetailVC: UIViewController, UITextViewDelegate {
     breedDetailView.descriptionTextView.text = breed.description
     breedDetailView.creditLabel.text = "Photo Credit: \(breed.credit)"
 
-    ImageCacheLoader.requestImage(url: breed.photoUrl) { photo in
-      if let photo {
-        self.breedDetailView.photoImageView.image = photo
-      }
+    Task {
+      await breedDetailView.photoImageView.image = ImageCacheLoader.requestImage(url: breed.photoUrl)
     }
 
     breedDetailView.wikipediaButton.addTarget(self, action: #selector(viewInWikipedia), for: .touchUpInside)

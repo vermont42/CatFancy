@@ -14,10 +14,6 @@ class BrowseBreedsVC: UIViewController {
   private var isRefreshing = false
   private let onRequestFinished: ([Breed]) -> ()
 
-  private var isRunningTests: Bool {
-      return ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
-  }
-
   private var browseBreedsView: BrowseBreedsView {
     if let castedView = view as? BrowseBreedsView {
       return castedView
@@ -58,66 +54,16 @@ class BrowseBreedsVC: UIViewController {
   }
 
   private func requestBreeds() {
-    if isRunningTests {
-      requestBreedsUsingClassicApproach()
-    } else {
-      requestBreedsUsingAsyncAwait()
-    }
-  }
-
-  private func requestBreedsUsingClassicApproach() {
-    loadingState = .loading
-    browseBreedsView.showLoadingState(loadingState)
-
-    BreedRequester.requestBreeds { breeds in
-      DispatchQueue.main.async {
-        if let breeds {
-          self.deleSource.breeds = breeds
-          self.deleSource.sortBreeds()
-          if breeds.isEmpty {
-            self.loadingState = .succeededWithNoBreeds
-            Current.soundPlayer.play(.sadTrombone)
-          } else {
-            self.loadingState = .succeededWithBreeds
-            Current.soundPlayer.play(.chime)
-          }
-        } else {
-          self.deleSource.breeds = []
-          self.loadingState = .failed
-          Current.soundPlayer.play(.sadTrombone)
-        }
-        self.browseBreedsView.showLoadingState(self.loadingState)
-        if self.isRefreshing {
-          self.browseBreedsView.refresh.endRefreshing()
-          self.isRefreshing = false
-        }
-        self.browseBreedsView.table.reloadData()
-        self.onRequestFinished(self.deleSource.breeds)
-      }
-    }
-  }
-
-  private func requestBreedsUsingAsyncAwait() {
-    loadingState = .loading
-    browseBreedsView.showLoadingState(loadingState)
     Task {
       await requestBreedsAsync()
     }
   }
 
   private func requestBreedsAsync() async {
-    defer {
-      browseBreedsView.showLoadingState(loadingState)
-      if isRefreshing {
-        browseBreedsView.refresh.endRefreshing()
-        isRefreshing = false
-      }
-      browseBreedsView.table.reloadData()
-      onRequestFinished(deleSource.breeds)
-    }
+    loadingState = .loading
+    browseBreedsView.showLoadingState(loadingState)
 
-    do {
-      let breeds = try await BreedRequester.requestBreeds()
+    if let breeds = await BreedRequester.requestBreeds() {
       deleSource.breeds = breeds
       if breeds.isEmpty {
         self.loadingState = .succeededWithNoBreeds
@@ -127,11 +73,19 @@ class BrowseBreedsVC: UIViewController {
         loadingState = .succeededWithBreeds
         Current.soundPlayer.play(.chime)
       }
-    } catch {
+    } else {
       deleSource.breeds = []
       loadingState = .failed
       Current.soundPlayer.play(.sadTrombone)
     }
+
+    browseBreedsView.showLoadingState(loadingState)
+    if isRefreshing {
+      browseBreedsView.refresh.endRefreshing()
+      isRefreshing = false
+    }
+    browseBreedsView.table.reloadData()
+    onRequestFinished(deleSource.breeds)
   }
 
   @objc private func refreshBreeds(_ sender: Any) {

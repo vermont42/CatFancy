@@ -16,6 +16,7 @@ class SettingsTests: XCTestCase {
     settings.breedsURL = .withMore
     XCTAssertNotEqual(Settings.breedsURLDefault, settings.breedsURL)
     XCTAssertEqual(BreedsURL.withMore, settings.breedsURL)
+    Current.settings.breedsURL = Settings.breedsURLDefault
   }
 
   func testSortOrderSetting() {
@@ -25,5 +26,6 @@ class SettingsTests: XCTestCase {
     settings.sortOrder = .popularity
     XCTAssertNotEqual(Settings.sortOrderDefault, settings.sortOrder)
     XCTAssertEqual(SortOrder.popularity, settings.sortOrder)
+    Current.settings.sortOrder = Settings.sortOrderDefault
   }
 }

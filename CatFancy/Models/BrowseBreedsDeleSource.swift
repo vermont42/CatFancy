@@ -30,7 +30,9 @@ class BrowseBreedsDeleSource: NSObject, UITableViewDelegate, UITableViewDataSour
     let breed = breeds[indexPath.row]
     cell.configure(breed: breed)
 
-    ImageCacheLoader.requestImage(url: breed.photoUrl) { image in
+    Task {
+      let image: UIImage?
+      await image = ImageCacheLoader.requestImage(url: breed.photoUrl)
       if
         let image = image,
         let updateCell = tableView.cellForRow(at: indexPath) as? BreedCell
@@ -38,6 +40,7 @@ class BrowseBreedsDeleSource: NSObject, UITableViewDelegate, UITableViewDataSour
         updateCell.photo.image = image
       }
     }
+
     return cell
   }
 

@@ -15,29 +15,20 @@ class ImageCacheLoader {
     cache = NSCache()
   }
 
-  static func requestImage(url: URL, completion: @escaping ((UIImage?) -> ())) {
+  static func requestImage(url: URL) async -> UIImage? {
     if let image = requestImageFromCache(url: url) {
-      DispatchQueue.main.async {
-        completion(image)
-      }
+      return image
     } else {
-      let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad)
-      Current.session.dataTask(with: request) { data, _, error in
-        guard
-          error == nil,
-          let data = data,
-          let image = UIImage(data: data)
-        else {
-          DispatchQueue.main.async {
-            completion(nil)
-          }
-          return
+      do {
+        let (data, _) = try await Current.session.data(from: url)
+        let image = UIImage(data: data)
+        if let image {
+          shared.cache.setObject(image, forKey: url.absoluteString as NSString)
         }
-        shared.cache.setObject(image, forKey: url.absoluteString as NSString)
-        DispatchQueue.main.async {
-          completion(image)
-        }
-      }.resume()
+        return image
+      } catch {
+        return nil
+      }
     }
   }
 
