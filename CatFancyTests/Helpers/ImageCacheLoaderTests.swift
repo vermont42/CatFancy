@@ -9,14 +9,6 @@
 import XCTest
 
 class ImageCacheLoaderTests: XCTestCase {
-  override class func setUp() {
-    Current = World.simulator
-  }
-
-  override class func tearDown() {
-    Current = World.unitTest
-  }
-
   func testImageNotAvailable() async {
     let badURLString = "https://racecondition.software"
     guard let badURL = URL(string: badURLString) else {

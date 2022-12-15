@@ -25,9 +25,15 @@ class URLProtocolStub: URLProtocol {
     {
       client?.urlProtocol(self, didReceive: URLResponse(), cacheStoragePolicy: .notAllowed)
       client?.urlProtocol(self, didLoad: data)
+    } else {
+      client?.urlProtocol(self, didFailWithError: LoadingError.loadFailed)
     }
     client?.urlProtocolDidFinishLoading(self)
   }
 
   override func stopLoading() {}
+
+  enum LoadingError: Error {
+    case loadFailed
+  }
 }
