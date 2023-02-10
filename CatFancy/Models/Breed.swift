@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Breed: Codable {
+struct Breed: Decodable {
   let name: String
   let knownFor: String
   let popularity: Int
