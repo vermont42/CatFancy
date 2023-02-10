@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum License: String, Codable {
+enum License: String, Decodable {
   case cc1
   case cc2
   case cc3

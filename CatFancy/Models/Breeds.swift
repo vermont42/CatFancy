@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Breeds: Codable {
+struct Breeds: Decodable {
   let breeds: [Breed]
 }
