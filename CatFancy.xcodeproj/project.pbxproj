@@ -23,7 +23,7 @@
 		03101A5C28E3A17900F7E42D /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5328E3A17900F7E42D /* SettingsTests.swift */; };
 		03101A5D28E3A17900F7E42D /* DictionaryGetterSetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5428E3A17900F7E42D /* DictionaryGetterSetterTests.swift */; };
 		03101A5E28E3A17900F7E42D /* BreedsURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5528E3A17900F7E42D /* BreedsURLTests.swift */; };
-		03101A5F28E3A17900F7E42D /* BreedRequesterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5628E3A17900F7E42D /* BreedRequesterTests.swift */; };
+		03101A5F28E3A17900F7E42D /* BreedsLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5628E3A17900F7E42D /* BreedsLoaderTests.swift */; };
 		03101A6328E3ADB500F7E42D /* BreedCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A6028E3ADB400F7E42D /* BreedCoordinatorTests.swift */; };
 		03101A6428E3ADB500F7E42D /* MainTabBarVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A6128E3ADB400F7E42D /* MainTabBarVCTests.swift */; };
 		03101A6528E3ADB500F7E42D /* SettingsCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A6228E3ADB400F7E42D /* SettingsCoordinatorTests.swift */; };
@@ -38,7 +38,7 @@
 		0317D09528DFAA3C00A4634C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0317D09328DFAA3C00A4634C /* LaunchScreen.storyboard */; };
 		0317D0C828E0EEE900A4634C /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0C728E0EEE900A4634C /* Breed.swift */; };
 		0317D0CA28E0EF6C00A4634C /* Breeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0C928E0EF6C00A4634C /* Breeds.swift */; };
-		0317D0CC28E0F05A00A4634C /* BreedRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0CB28E0F05A00A4634C /* BreedRequester.swift */; };
+		0317D0CC28E0F05A00A4634C /* BreedsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0CB28E0F05A00A4634C /* BreedsLoader.swift */; };
 		0317D0CE28E0F15100A4634C /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0CD28E0F15100A4634C /* MainTabBarVC.swift */; };
 		0317D0D028E0F1E800A4634C /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0CF28E0F1E800A4634C /* World.swift */; };
 		0317D0DC28E0F24900A4634C /* NSLayoutConstraintExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0D128E0F24900A4634C /* NSLayoutConstraintExtension.swift */; };
@@ -122,7 +122,7 @@
 		03101A5328E3A17900F7E42D /* SettingsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		03101A5428E3A17900F7E42D /* DictionaryGetterSetterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryGetterSetterTests.swift; sourceTree = "<group>"; };
 		03101A5528E3A17900F7E42D /* BreedsURLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedsURLTests.swift; sourceTree = "<group>"; };
-		03101A5628E3A17900F7E42D /* BreedRequesterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedRequesterTests.swift; sourceTree = "<group>"; };
+		03101A5628E3A17900F7E42D /* BreedsLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedsLoaderTests.swift; sourceTree = "<group>"; };
 		03101A6028E3ADB400F7E42D /* BreedCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedCoordinatorTests.swift; sourceTree = "<group>"; };
 		03101A6128E3ADB400F7E42D /* MainTabBarVCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarVCTests.swift; sourceTree = "<group>"; };
 		03101A6228E3ADB400F7E42D /* SettingsCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 		0317D09B28DFAA3C00A4634C /* CatFancyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatFancyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0317D0C728E0EEE900A4634C /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		0317D0C928E0EF6C00A4634C /* Breeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breeds.swift; sourceTree = "<group>"; };
-		0317D0CB28E0F05A00A4634C /* BreedRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRequester.swift; sourceTree = "<group>"; };
+		0317D0CB28E0F05A00A4634C /* BreedsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsLoader.swift; sourceTree = "<group>"; };
 		0317D0CD28E0F15100A4634C /* MainTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarVC.swift; sourceTree = "<group>"; };
 		0317D0CF28E0F1E800A4634C /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		0317D0D128E0F24900A4634C /* NSLayoutConstraintExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtension.swift; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 		0317D0BC28DFAB5100A4634C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				0317D0CB28E0F05A00A4634C /* BreedRequester.swift */,
+				0317D0CB28E0F05A00A4634C /* BreedsLoader.swift */,
 				0317D0DB28E0F24900A4634C /* Fonts.swift */,
 				0365272228E1187600C31BA4 /* ImageCacheLoader.swift */,
 				0317D0D928E0F24900A4634C /* Layout.swift */,
@@ -411,7 +411,7 @@
 		0317D0C428DFAB7A00A4634C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				03101A5628E3A17900F7E42D /* BreedRequesterTests.swift */,
+				03101A5628E3A17900F7E42D /* BreedsLoaderTests.swift */,
 				03101A3F28E39C9E00F7E42D /* ImageCacheLoaderTests.swift */,
 				03101A3E28E39C9E00F7E42D /* NSLayoutConstraintExtensionTests.swift */,
 				03101A4228E39C9E00F7E42D /* RealSoundPlayerTests.swift */,
@@ -592,7 +592,7 @@
 				0317D0DC28E0F24900A4634C /* NSLayoutConstraintExtension.swift in Sources */,
 				03872D2928E15F9400B99D5F /* SettingsView.swift in Sources */,
 				0317D0E028E0F24900A4634C /* UsesAutoLayout.swift in Sources */,
-				0317D0CC28E0F05A00A4634C /* BreedRequester.swift in Sources */,
+				0317D0CC28E0F05A00A4634C /* BreedsLoader.swift in Sources */,
 				0317D0C828E0EEE900A4634C /* Breed.swift in Sources */,
 				03872D2D28E1615600B99D5F /* SettingsCoordinator.swift in Sources */,
 				0317D0E828E0F52B00A4634C /* BreedsURL.swift in Sources */,
@@ -637,7 +637,7 @@
 				03101A6C28E3B34600F7E42D /* BreedCellTests.swift in Sources */,
 				03101A6A28E3B34600F7E42D /* SettingsViewTests.swift in Sources */,
 				03872D3D28E360F000B99D5F /* AppDelegateTests.swift in Sources */,
-				03101A5F28E3A17900F7E42D /* BreedRequesterTests.swift in Sources */,
+				03101A5F28E3A17900F7E42D /* BreedsLoaderTests.swift in Sources */,
 				03101A4628E39C9E00F7E42D /* NSLayoutConstraintExtensionTests.swift in Sources */,
 				03101A6B28E3B34600F7E42D /* BreedDetailViewTests.swift in Sources */,
 				03101A5E28E3A17900F7E42D /* BreedsURLTests.swift in Sources */,

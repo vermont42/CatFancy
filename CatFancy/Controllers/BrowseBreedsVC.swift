@@ -46,24 +46,24 @@ class BrowseBreedsVC: UIViewController {
     browseBreedsView.showLoadingState(loadingState)
 
     if loadingState == .notStarted {
-      requestBreeds()
+      loadBreeds()
     } else if loadingState == .succeededWithBreeds {
       deleSource.sortBreeds()
       browseBreedsView.table.setContentOffset(.zero, animated: false)
     }
   }
 
-  private func requestBreeds() {
+  private func loadBreeds() {
     Task {
-      await requestBreedsAsync()
+      await loadBreedsAsync()
     }
   }
 
-  private func requestBreedsAsync() async {
+  private func loadBreedsAsync() async {
     loadingState = .loading
     browseBreedsView.showLoadingState(loadingState)
 
-    if let breeds = await BreedRequester.requestBreeds() {
+    if let breeds = await BreedsLoader.loadBreeds() {
       deleSource.breeds = breeds
       if breeds.isEmpty {
         self.loadingState = .succeededWithNoBreeds
@@ -90,10 +90,10 @@ class BrowseBreedsVC: UIViewController {
 
   @objc private func refreshBreeds(_ sender: Any) {
     isRefreshing = true
-    requestBreeds()
+    loadBreeds()
   }
 
   @objc func retry() {
-    requestBreeds()
+    loadBreeds()
   }
 }
