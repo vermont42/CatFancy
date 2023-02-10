@@ -9,9 +9,9 @@
 import XCTest
 
 class BreedsLoaderTests: XCTestCase {
-  func testRequestBreeds() async {
-    let breeds = await BreedsLoader.loadBreeds()
+  func testLoadBreeds() async throws {
+    let breeds = try await BreedsLoader.loadBreeds()
     let expectedCount = 14
-    XCTAssertEqual(expectedCount, breeds?.count ?? 0)
+    XCTAssertEqual(expectedCount, breeds.count)
   }
 }

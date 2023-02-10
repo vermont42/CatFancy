@@ -63,7 +63,8 @@ class BrowseBreedsVC: UIViewController {
     loadingState = .loading
     browseBreedsView.showLoadingState(loadingState)
 
-    if let breeds = await BreedsLoader.loadBreeds() {
+    do {
+      let breeds = try await BreedsLoader.loadBreeds()
       deleSource.breeds = breeds
       if breeds.isEmpty {
         self.loadingState = .succeededWithNoBreeds
@@ -73,7 +74,7 @@ class BrowseBreedsVC: UIViewController {
         loadingState = .succeededWithBreeds
         Current.soundPlayer.play(.chime)
       }
-    } else {
+    } catch {
       deleSource.breeds = []
       loadingState = .failed
       Current.soundPlayer.play(.sadTrombone)
