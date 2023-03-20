@@ -1,9 +1,5 @@
-//
-//  main.swift
-//  CatFancy
-//
-//  Shared by Jon Reid in 2016.
-//
+// Created by Josh Adams, who holds the copyright and reserves all rights, on 9/24/22.
+// Shared by Jon Reid in 2016.
 
 import UIKit
 

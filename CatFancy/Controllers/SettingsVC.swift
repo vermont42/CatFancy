@@ -1,9 +1,4 @@
-//
-//  SettingsVC.swift
-//  CatFancy
-//
-//  Created by Josh Adams on 9/25/22.
-//
+// Created by Josh Adams, who holds the copyright and reserves all rights, on 9/24/22.
 
 import UIKit
 

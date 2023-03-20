@@ -1,9 +1,4 @@
-//
-//  BreedCoordinatorTests.swift
-//  CatFancyTests
-//
-//  Created by Josh Adams on 6/1/21.
-//
+// Created by Josh Adams, who holds the copyright and reserves all rights, on 9/24/22.
 
 @testable import CatFancy
 import XCTest

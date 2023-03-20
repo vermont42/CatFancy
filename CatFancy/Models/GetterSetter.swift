@@ -1,9 +1,4 @@
-//
-//  GetterSetter.swift
-//  CatFancy
-//
-//  Created by Josh Adams on 1/13/19.
-//
+// Created by Josh Adams, who holds the copyright and reserves all rights, on 9/24/22.
 
 import Foundation
 

@@ -1,9 +1,4 @@
-//
-//  UsesAutoLayout.swift
-//  CatFancy
-//
-//  Created by Josh Adams on 5/28/21.
-//
+// Created by Josh Adams, who holds the copyright and reserves all rights, on 9/24/22.
 
 import UIKit
 

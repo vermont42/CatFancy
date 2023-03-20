@@ -1,9 +1,4 @@
-//
-//  TestingRootVC.swift
-//  CatFancyTests
-//
-//  Created by Josh Adams on 9/16/22.
-//
+// Created by Josh Adams, who holds the copyright and reserves all rights, on 9/24/22.
 
 @testable import CatFancy
 import UIKit
