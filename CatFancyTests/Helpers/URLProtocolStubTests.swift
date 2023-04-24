@@ -24,7 +24,7 @@ class URLProtocolStubTests: XCTestCase {
   }
 
   var request: URLRequest {
-    return URLRequest(url: url)
+    URLRequest(url: url)
   }
 
   func testCanInit() {
