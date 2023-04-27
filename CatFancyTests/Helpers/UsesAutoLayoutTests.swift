@@ -5,9 +5,7 @@ import XCTest
 
 class UsesAutoLayoutTests: XCTestCase {
   @UsesAutoLayout
-  var wrappedView: UIView = {
-    return UIView()
-  }()
+  var wrappedView = UIView()
 
   func testUsesAutoLayout() {
     let vanillaView = UIView()
