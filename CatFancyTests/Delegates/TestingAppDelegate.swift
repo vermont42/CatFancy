@@ -7,7 +7,8 @@ import UIKit
 final class TestingAppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     Current = World.unitTest
-    // Remove any cached scene configurations to ensure that TestingAppDelegate.application(_:configurationForConnecting:options:) is
+    // Remove any cached scene configurations to ensure that
+    // TestingAppDelegate.application(_:configurationForConnecting:options:) is
     // called and that TestingSceneDelegate will be used when running unit tests.
     for sceneSession in application.openSessions {
       application.perform(Selector(("_removeSessionFromSessionSet:")), with: sceneSession)
