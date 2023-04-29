@@ -16,6 +16,6 @@ class URLSessionExtensionTests: XCTestCase {
     let session = URLSession.stubSession
     XCTAssert(session.configuration.protocolClasses?[0] is URLProtocolStub.Type)
     let expectedTestURLCount = 5
-    XCTAssertEqual(expectedTestURLCount, URLProtocolStub.testURLs.count)
+    XCTAssertEqual(expectedTestURLCount, URLSession.urlDataDict.count)
   }
 }

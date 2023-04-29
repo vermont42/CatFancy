@@ -3,6 +3,7 @@
 import Foundation
 
 extension URLSession {
+  static var urlDataDict = [URL: Data]()
   static var didProcessURLs = false
 
   static var stubSession: URLSession {
@@ -11,7 +12,7 @@ extension URLSession {
         if let path = Bundle.main.path(forResource: $0.url.lastPathComponent, ofType: nil) {
           do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path))
-            URLProtocolStub.testURLs[$0.url] = data
+            URLSession.urlDataDict[$0.url] = data
           } catch {
             fatalError("Unable to load mock JSON data for URL \($0.url).")
           }
@@ -21,7 +22,7 @@ extension URLSession {
       if let url = Bundle.main.url(forResource: MockData.mockPhotoName, withExtension: MockData.mockPhotoExtension) {
         do {
           let data = try Data(contentsOf: url)
-          URLProtocolStub.testURLs[MockData.photoURL] = data
+          URLSession.urlDataDict[MockData.photoURL] = data
         } catch {
           fatalError("Unable to initialize Data.")
         }

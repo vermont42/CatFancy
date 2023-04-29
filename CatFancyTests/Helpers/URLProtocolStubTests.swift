@@ -4,17 +4,17 @@
 import XCTest
 
 class URLProtocolStubTests: XCTestCase {
-  private static var backupTestURLs = [URL?: Data]()
+  private static var backupURLDataDict = [URL: Data]()
 
   override class func setUp() {
-    backupTestURLs = URLProtocolStub.testURLs
+    backupURLDataDict = URLSession.urlDataDict
   }
 
   override class func tearDown() {
-    URLProtocolStub.testURLs = backupTestURLs
+    URLSession.urlDataDict = backupURLDataDict
   }
 
-  var url: URL {
+  private var url: URL {
     let urlString = "https://racecondition.software"
     if let url = URL(string: urlString) {
       return url
@@ -23,7 +23,7 @@ class URLProtocolStubTests: XCTestCase {
     }
   }
 
-  var request: URLRequest {
+  private var request: URLRequest {
     URLRequest(url: url)
   }
 
@@ -36,23 +36,23 @@ class URLProtocolStubTests: XCTestCase {
   }
 
   func testStartLoading() {
-    URLProtocolStub.testURLs = [url: Data()]
+    URLSession.urlDataDict = [url: Data()]
     let exp = expectation(description: "Waiting for load.")
-    let client = ProtocolClientStub { urlProtocol in
+    let protocolClientStub = ProtocolClientStub(didFinishLoading: { urlProtocol in
       XCTAssert(urlProtocol is URLProtocolStub)
       exp.fulfill()
-    }
-    let stub = URLProtocolStub(request: request, cachedResponse: nil, client: client)
-    stub.startLoading()
+    })
+    let urlProtocolStub = URLProtocolStub(request: request, cachedResponse: nil, client: protocolClientStub)
+    urlProtocolStub.startLoading()
     let timeout: TimeInterval = 1.0
     wait(for: [exp], timeout: timeout)
   }
 }
 
 private class ProtocolClientStub: NSObject, URLProtocolClient {
-  let didFinishLoading: (URLProtocol) -> ()
+  let didFinishLoading: (URLProtocol) -> Void
 
-  init(didFinishLoading: @escaping (URLProtocol) -> ()) {
+  init(didFinishLoading: @escaping (URLProtocol) -> Void) {
     self.didFinishLoading = didFinishLoading
   }
 

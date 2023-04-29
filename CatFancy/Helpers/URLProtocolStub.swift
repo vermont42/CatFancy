@@ -3,8 +3,6 @@
 import Foundation
 
 class URLProtocolStub: URLProtocol {
-  static var testURLs = [URL?: Data]()
-
   override class func canInit(with request: URLRequest) -> Bool {
     return true
   }
@@ -16,7 +14,7 @@ class URLProtocolStub: URLProtocol {
   override func startLoading() {
     if
       let url = request.url,
-      let data = URLProtocolStub.testURLs[url]
+      let data = URLSession.urlDataDict[url]
     {
       client?.urlProtocol(self, didReceive: URLResponse(), cacheStoragePolicy: .notAllowed)
       client?.urlProtocol(self, didLoad: data)
