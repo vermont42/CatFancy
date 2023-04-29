@@ -38,19 +38,18 @@ class URLProtocolStubTests: XCTestCase {
   func testStartLoading() {
     URLProtocolStub.testURLs = [url: Data()]
     let exp = expectation(description: "Waiting for load.")
-    let stub: URLProtocolStub
-    let client = ProtocolClientSpy { urlProtocol in
+    let client = ProtocolClientStub { urlProtocol in
       XCTAssert(urlProtocol is URLProtocolStub)
       exp.fulfill()
     }
-    stub = URLProtocolStub(request: request, cachedResponse: nil, client: client)
+    let stub = URLProtocolStub(request: request, cachedResponse: nil, client: client)
     stub.startLoading()
     let timeout: TimeInterval = 1.0
     wait(for: [exp], timeout: timeout)
   }
 }
 
-private class ProtocolClientSpy: NSObject, URLProtocolClient {
+private class ProtocolClientStub: NSObject, URLProtocolClient {
   let didFinishLoading: (URLProtocol) -> ()
 
   init(didFinishLoading: @escaping (URLProtocol) -> ()) {
