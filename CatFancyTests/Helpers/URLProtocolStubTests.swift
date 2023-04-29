@@ -39,7 +39,7 @@ class URLProtocolStubTests: XCTestCase {
     URLProtocolStub.testURLs = [url: Data()]
     let exp = expectation(description: "Waiting for load.")
     let stub: URLProtocolStub
-    let client = TestProtocolClient { urlProtocol in
+    let client = ProtocolClientSpy { urlProtocol in
       XCTAssert(urlProtocol is URLProtocolStub)
       exp.fulfill()
     }
@@ -50,7 +50,7 @@ class URLProtocolStubTests: XCTestCase {
   }
 }
 
-private class TestProtocolClient: NSObject, URLProtocolClient {
+private class ProtocolClientSpy: NSObject, URLProtocolClient {
   let didFinishLoading: (URLProtocol) -> ()
 
   init(didFinishLoading: @escaping (URLProtocol) -> ()) {
