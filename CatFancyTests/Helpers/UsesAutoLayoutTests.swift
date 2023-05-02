@@ -5,19 +5,18 @@ import XCTest
 
 class UsesAutoLayoutTests: XCTestCase {
   @UsesAutoLayout
-  var wrappedView = UIView()
+  private var wrappedView = UIView()
 
   func testUsesAutoLayout() {
+    XCTAssertFalse(wrappedView.translatesAutoresizingMaskIntoConstraints)
+
     let vanillaView = UIView()
     XCTAssert(vanillaView.translatesAutoresizingMaskIntoConstraints)
 
-    XCTAssertFalse(wrappedView.translatesAutoresizingMaskIntoConstraints)
+    var vanillaWrappedView = UsesAutoLayout<UIView>(wrappedValue: vanillaView)
+    XCTAssertFalse(vanillaWrappedView.wrappedValue.translatesAutoresizingMaskIntoConstraints)
 
-    let chocolateView = UIView()
-    XCTAssert(chocolateView.translatesAutoresizingMaskIntoConstraints)
-    var chocolateWrappedView = UsesAutoLayout<UIView>(wrappedValue: chocolateView)
-    XCTAssertFalse(chocolateWrappedView.wrappedValue.translatesAutoresizingMaskIntoConstraints)
-    chocolateWrappedView.wrappedValue = chocolateView
-    XCTAssertFalse(chocolateWrappedView.wrappedValue.translatesAutoresizingMaskIntoConstraints)
+    vanillaWrappedView.wrappedValue = vanillaView
+    XCTAssertFalse(vanillaWrappedView.wrappedValue.translatesAutoresizingMaskIntoConstraints)
   }
 }
