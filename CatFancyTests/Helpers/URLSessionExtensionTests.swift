@@ -4,14 +4,6 @@
 import XCTest
 
 class URLSessionExtensionTests: XCTestCase {
-  override class func setUp() {
-    URLSession.didProcessURLs = false
-  }
-
-  override class func tearDown() {
-    URLSession.didProcessURLs = false
-  }
-
   func testStubData() {
     let session = URLSession.stubSession
     XCTAssert(session.configuration.protocolClasses?[0] is URLProtocolStub.Type)

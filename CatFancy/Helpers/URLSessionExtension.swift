@@ -8,27 +8,17 @@ extension URLSession {
 
   static var stubSession: URLSession {
     if !didProcessURLs {
-      BreedsURL.allCases.forEach {
-        if let path = Bundle.main.path(forResource: $0.url.lastPathComponent, ofType: nil) {
-          do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: path))
-            URLSession.urlDataDict[$0.url] = data
-          } catch {
-            fatalError("Unable to load mock JSON data for URL \($0.url).")
-          }
+      for breedsURL in BreedsURL.allCases {
+        guard let breedData = jsonDataFromBundle(url: breedsURL.url) else {
+          fatalError("Unable to load mock JSON data for URL \(breedsURL.url).")
         }
+        urlDataDict[breedsURL.url] = breedData
       }
 
-      if let url = Bundle.main.url(forResource: MockData.mockPhotoName, withExtension: MockData.mockPhotoExtension) {
-        do {
-          let data = try Data(contentsOf: url)
-          URLSession.urlDataDict[MockData.photoURL] = data
-        } catch {
-          fatalError("Unable to initialize Data.")
-        }
-      } else {
-        fatalError("Unable to construct path to \(MockData.mockPhotoName).\(MockData.mockPhotoExtension).")
+      guard let photoData = photoDataFromBundle else {
+        fatalError("Unable to load mock photo data.")
       }
+      urlDataDict[MockData.photoURL] = photoData
 
       didProcessURLs = true
     }
@@ -36,5 +26,27 @@ extension URLSession {
     let config = URLSessionConfiguration.ephemeral
     config.protocolClasses = [URLProtocolStub.self]
     return URLSession(configuration: config)
+  }
+
+  static func jsonDataFromBundle(url: URL) -> Data? {
+    if
+      let path = Bundle.main.path(forResource: url.lastPathComponent, ofType: nil),
+      let data = try? Data(contentsOf: URL(fileURLWithPath: path))
+    {
+      return data
+    } else {
+      return nil
+    }
+  }
+
+  static var photoDataFromBundle: Data? {
+    if
+      let url = Bundle.main.url(forResource: MockData.mockPhotoName, withExtension: MockData.mockPhotoExtension),
+      let data = try? Data(contentsOf: url)
+    {
+      return data
+    } else {
+      return nil
+    }
   }
 }
