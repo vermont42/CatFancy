@@ -9,13 +9,6 @@ struct World {
   var soundPlayer: SoundPlayer
   var getterSetter: GetterSetter
 
-  init(settings: Settings, session: URLSession, soundPlayer: SoundPlayer, getterSetter: GetterSetter) {
-    self.settings = settings
-    self.session = session
-    self.soundPlayer = soundPlayer
-    self.getterSetter = getterSetter
-  }
-
   static let device: World = {
     let getterSetter = UserDefaultsGetterSetter()
     return World(

@@ -8,10 +8,10 @@ class UsesAutoLayoutTests: XCTestCase {
   private var wrappedView = UIView()
 
   func testUsesAutoLayout() {
-    XCTAssertFalse(wrappedView.translatesAutoresizingMaskIntoConstraints)
-
     let vanillaView = UIView()
     XCTAssert(vanillaView.translatesAutoresizingMaskIntoConstraints)
+
+    XCTAssertFalse(wrappedView.translatesAutoresizingMaskIntoConstraints)
 
     var vanillaWrappedView = UsesAutoLayout<UIView>(wrappedValue: vanillaView)
     XCTAssertFalse(vanillaWrappedView.wrappedValue.translatesAutoresizingMaskIntoConstraints)
