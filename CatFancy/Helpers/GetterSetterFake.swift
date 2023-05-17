@@ -1,6 +1,6 @@
 // Created by Josh Adams, who holds the copyright and reserves all rights, on 9/24/22.
 
-class DictionaryGetterSetter: GetterSetter {
+class GetterSetterFake: GetterSetter {
   var dictionary: [String: String] = [:]
 
   init() {}

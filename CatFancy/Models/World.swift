@@ -9,32 +9,22 @@ struct World {
   var soundPlayer: SoundPlayer
   var getterSetter: GetterSetter
 
-  static let device: World = {
-    let getterSetter = UserDefaultsGetterSetter()
-    return World(
-      settings: Settings(getterSetter: UserDefaultsGetterSetter()),
-      session: URLSession.shared,
-      soundPlayer: RealSoundPlayer(),
-      getterSetter: getterSetter
-    )
-  }()
-
-  static let simulator: World = {
-    let getterSetter = UserDefaultsGetterSetter()
+  static let production: World = {
+    let getterSetter = GetterSetterReal()
     return World(
       settings: Settings(getterSetter: getterSetter),
       session: URLSession.shared,
-      soundPlayer: RealSoundPlayer(),
+      soundPlayer: SoundPlayerReal(),
       getterSetter: getterSetter
     )
   }()
 
   static let unitTest: World = {
-    let getterSetter = DictionaryGetterSetter()
+    let getterSetter = GetterSetterFake()
     return World(
       settings: Settings(getterSetter: getterSetter),
       session: URLSession.stubSession,
-      soundPlayer: TestSoundPlayer(),
+      soundPlayer: SoundPlayerDummy(),
       getterSetter: getterSetter
     )
   }()

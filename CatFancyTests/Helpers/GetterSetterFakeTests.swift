@@ -3,9 +3,9 @@
 @testable import CatFancy
 import XCTest
 
-class DictionaryGetterSetterTests: XCTestCase {
+class GetterSetterFakeTests: XCTestCase {
   func testGetAndSet() {
-    let settings = Settings(getterSetter: DictionaryGetterSetter())
+    let settings = Settings(getterSetter: GetterSetterFake())
     let initialOrder = settings.sortOrder
     XCTAssertEqual(SortOrder.name, initialOrder)
     settings.sortOrder = .popularity
@@ -15,7 +15,7 @@ class DictionaryGetterSetterTests: XCTestCase {
   func testInitialization() {
     let 🦖 = "🦖"
     let 🪐 = "🪐"
-    let getterSetter = DictionaryGetterSetter(dictionary: [🦖: 🪐])
+    let getterSetter = GetterSetterFake(dictionary: [🦖: 🪐])
     XCTAssertEqual(getterSetter.get(key: 🦖), 🪐)
   }
 }

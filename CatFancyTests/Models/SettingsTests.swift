@@ -5,7 +5,7 @@ import XCTest
 
 class SettingsTests: XCTestCase {
   func testBreedsURLSetting() {
-    let settings = Settings(getterSetter: DictionaryGetterSetter())
+    let settings = Settings(getterSetter: GetterSetterFake())
     XCTAssertEqual(Settings.breedsURLDefault, settings.breedsURL)
     XCTAssertEqual(BreedsURL.standard, settings.breedsURL)
     settings.breedsURL = .withMore
@@ -15,7 +15,7 @@ class SettingsTests: XCTestCase {
   }
 
   func testSortOrderSetting() {
-    let settings = Settings(getterSetter: DictionaryGetterSetter())
+    let settings = Settings(getterSetter: GetterSetterFake())
     XCTAssertEqual(Settings.sortOrderDefault, settings.sortOrder)
     XCTAssertEqual(SortOrder.name, settings.sortOrder)
     settings.sortOrder = .popularity

@@ -4,26 +4,19 @@
 import XCTest
 
 class WorldTests: XCTestCase {
-  func testDeviceWorld() {
-    let world = World.device
-    XCTAssert(world.settings.getterSetter is UserDefaultsGetterSetter)
+  func testProductionWorld() {
+    let world = World.production
+    XCTAssert(world.settings.getterSetter is GetterSetterReal)
     XCTAssertEqual(world.session, URLSession.shared)
-    XCTAssert(world.soundPlayer is RealSoundPlayer)
-  }
-
-  func testSimulatorWorld() {
-    let world = World.simulator
-    XCTAssert(world.settings.getterSetter is UserDefaultsGetterSetter)
-    XCTAssertEqual(world.session, URLSession.shared)
-    XCTAssert(world.soundPlayer is RealSoundPlayer)
+    XCTAssert(world.soundPlayer is SoundPlayerReal)
   }
 
   func testUnitTestWorld() {
     let world = World.unitTest
-    XCTAssert(world.settings.getterSetter is DictionaryGetterSetter)
+    XCTAssert(world.settings.getterSetter is GetterSetterFake)
     XCTAssertNotEqual(URLSession.shared, world.session)
     let expectedProtocolClassesCount = 1
     XCTAssertEqual(expectedProtocolClassesCount, world.session.configuration.protocolClasses?.count)
-    XCTAssert(world.soundPlayer is TestSoundPlayer)
+    XCTAssert(world.soundPlayer is SoundPlayerDummy)
   }
 }

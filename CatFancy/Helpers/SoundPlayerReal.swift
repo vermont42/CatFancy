@@ -2,30 +2,23 @@
 
 import AVFoundation
 
-class RealSoundPlayer: SoundPlayer {
+class SoundPlayerReal: SoundPlayer {
   private var sounds: [String: AVAudioPlayer]
   private let soundExtension = "mp3"
 
   init () {
-    sounds = Dictionary()
+    sounds = [:]
   }
 
-  func play(_ sound: Sound, didSucceed: @escaping (Bool) -> ()) {
+  func play(_ sound: Sound) {
     if sounds[sound.rawValue] == nil {
       if let audioURL = Bundle.main.url(forResource: sound.rawValue, withExtension: soundExtension) {
-        do {
-          try sounds[sound.rawValue] = AVAudioPlayer.init(contentsOf: audioURL)
-        } catch {
-          didSucceed(false)
-        }
+        try? sounds[sound.rawValue] = AVAudioPlayer.init(contentsOf: audioURL)
       }
     }
 
     if let retrievedSound = sounds[sound.rawValue] {
       retrievedSound.play()
-      didSucceed(true)
-    } else {
-      didSucceed(false)
     }
   }
 }

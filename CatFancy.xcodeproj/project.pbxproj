@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03101A4428E39C9E00F7E42D /* TestSoundPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A3C28E39C9E00F7E42D /* TestSoundPlayerTests.swift */; };
+		03101A4428E39C9E00F7E42D /* SoundPlayerDummyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A3C28E39C9E00F7E42D /* SoundPlayerDummyTests.swift */; };
 		03101A4528E39C9E00F7E42D /* UsesAutoLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A3D28E39C9E00F7E42D /* UsesAutoLayoutTests.swift */; };
 		03101A4628E39C9E00F7E42D /* NSLayoutConstraintExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A3E28E39C9E00F7E42D /* NSLayoutConstraintExtensionTests.swift */; };
 		03101A4728E39C9E00F7E42D /* ImageCacheLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A3F28E39C9E00F7E42D /* ImageCacheLoaderTests.swift */; };
 		03101A4828E39C9E00F7E42D /* UIViewControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A4028E39C9E00F7E42D /* UIViewControllerExtensionTests.swift */; };
 		03101A4928E39C9E00F7E42D /* URLSessionExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A4128E39C9E00F7E42D /* URLSessionExtensionTests.swift */; };
-		03101A4A28E39C9E00F7E42D /* RealSoundPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A4228E39C9E00F7E42D /* RealSoundPlayerTests.swift */; };
+		03101A4A28E39C9E00F7E42D /* SoundPlayerRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A4228E39C9E00F7E42D /* SoundPlayerRealTests.swift */; };
 		03101A4B28E39C9E00F7E42D /* URLProtocolStubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A4328E39C9E00F7E42D /* URLProtocolStubTests.swift */; };
 		03101A4D28E39EAB00F7E42D /* URLExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A4C28E39EAB00F7E42D /* URLExtensionTests.swift */; };
 		03101A5728E3A17900F7E42D /* WorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A4E28E3A17900F7E42D /* WorldTests.swift */; };
 		03101A5828E3A17900F7E42D /* BrowseBreedsDeleSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A4F28E3A17900F7E42D /* BrowseBreedsDeleSourceTests.swift */; };
-		03101A5928E3A17900F7E42D /* UserDefaultsGetterSetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5028E3A17900F7E42D /* UserDefaultsGetterSetterTests.swift */; };
+		03101A5928E3A17900F7E42D /* GetterSetterRealTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5028E3A17900F7E42D /* GetterSetterRealTests.swift */; };
 		03101A5B28E3A17900F7E42D /* SortOrderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5228E3A17900F7E42D /* SortOrderTests.swift */; };
 		03101A5C28E3A17900F7E42D /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5328E3A17900F7E42D /* SettingsTests.swift */; };
-		03101A5D28E3A17900F7E42D /* DictionaryGetterSetterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5428E3A17900F7E42D /* DictionaryGetterSetterTests.swift */; };
+		03101A5D28E3A17900F7E42D /* GetterSetterFakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5428E3A17900F7E42D /* GetterSetterFakeTests.swift */; };
 		03101A5E28E3A17900F7E42D /* BreedsURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5528E3A17900F7E42D /* BreedsURLTests.swift */; };
 		03101A5F28E3A17900F7E42D /* BreedsLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A5628E3A17900F7E42D /* BreedsLoaderTests.swift */; };
 		03101A6328E3ADB500F7E42D /* BreedCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03101A6028E3ADB400F7E42D /* BreedCoordinatorTests.swift */; };
@@ -48,16 +48,16 @@
 		0317D0E028E0F24900A4634C /* UsesAutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0D528E0F24900A4634C /* UsesAutoLayout.swift */; };
 		0317D0E128E0F24900A4634C /* NSCoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0D628E0F24900A4634C /* NSCoderExtension.swift */; };
 		0317D0E228E0F24900A4634C /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0D728E0F24900A4634C /* URLProtocolStub.swift */; };
-		0317D0E328E0F24900A4634C /* RealSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0D828E0F24900A4634C /* RealSoundPlayer.swift */; };
+		0317D0E328E0F24900A4634C /* SoundPlayerReal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0D828E0F24900A4634C /* SoundPlayerReal.swift */; };
 		0317D0E428E0F24900A4634C /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0D928E0F24900A4634C /* Layout.swift */; };
-		0317D0E528E0F24900A4634C /* TestSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0DA28E0F24900A4634C /* TestSoundPlayer.swift */; };
+		0317D0E528E0F24900A4634C /* SoundPlayerDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0DA28E0F24900A4634C /* SoundPlayerDummy.swift */; };
 		0317D0E628E0F24900A4634C /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0DB28E0F24900A4634C /* Fonts.swift */; };
 		0317D0E828E0F52B00A4634C /* BreedsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0E728E0F52B00A4634C /* BreedsURL.swift */; };
 		0317D0EA28E0F60F00A4634C /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0E928E0F60F00A4634C /* Settings.swift */; };
 		0317D0EC28E0F6A900A4634C /* SortOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0EB28E0F6A900A4634C /* SortOrder.swift */; };
 		0317D0F028E1017600A4634C /* GetterSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0ED28E1017600A4634C /* GetterSetter.swift */; };
-		0317D0F128E1017600A4634C /* DictionaryGetterSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0EE28E1017600A4634C /* DictionaryGetterSetter.swift */; };
-		0317D0F228E1017600A4634C /* UserDefaultsGetterSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0EF28E1017600A4634C /* UserDefaultsGetterSetter.swift */; };
+		0317D0F128E1017600A4634C /* GetterSetterFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0EE28E1017600A4634C /* GetterSetterFake.swift */; };
+		0317D0F228E1017600A4634C /* GetterSetterReal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0EF28E1017600A4634C /* GetterSetterReal.swift */; };
 		0317D0F428E101BE00A4634C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0F328E101BE00A4634C /* main.swift */; };
 		0317D0F628E1028000A4634C /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317D0F528E1028000A4634C /* MockData.swift */; };
 		0317D0F828E102E600A4634C /* Abyssinian.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0317D0F728E102E600A4634C /* Abyssinian.jpg */; };
@@ -106,21 +106,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03101A3C28E39C9E00F7E42D /* TestSoundPlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSoundPlayerTests.swift; sourceTree = "<group>"; };
+		03101A3C28E39C9E00F7E42D /* SoundPlayerDummyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayerDummyTests.swift; sourceTree = "<group>"; };
 		03101A3D28E39C9E00F7E42D /* UsesAutoLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsesAutoLayoutTests.swift; sourceTree = "<group>"; };
 		03101A3E28E39C9E00F7E42D /* NSLayoutConstraintExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensionTests.swift; sourceTree = "<group>"; };
 		03101A3F28E39C9E00F7E42D /* ImageCacheLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheLoaderTests.swift; sourceTree = "<group>"; };
 		03101A4028E39C9E00F7E42D /* UIViewControllerExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensionTests.swift; sourceTree = "<group>"; };
 		03101A4128E39C9E00F7E42D /* URLSessionExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionExtensionTests.swift; sourceTree = "<group>"; };
-		03101A4228E39C9E00F7E42D /* RealSoundPlayerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealSoundPlayerTests.swift; sourceTree = "<group>"; };
+		03101A4228E39C9E00F7E42D /* SoundPlayerRealTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayerRealTests.swift; sourceTree = "<group>"; };
 		03101A4328E39C9E00F7E42D /* URLProtocolStubTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProtocolStubTests.swift; sourceTree = "<group>"; };
 		03101A4C28E39EAB00F7E42D /* URLExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLExtensionTests.swift; sourceTree = "<group>"; };
 		03101A4E28E3A17900F7E42D /* WorldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldTests.swift; sourceTree = "<group>"; };
 		03101A4F28E3A17900F7E42D /* BrowseBreedsDeleSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseBreedsDeleSourceTests.swift; sourceTree = "<group>"; };
-		03101A5028E3A17900F7E42D /* UserDefaultsGetterSetterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsGetterSetterTests.swift; sourceTree = "<group>"; };
+		03101A5028E3A17900F7E42D /* GetterSetterRealTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetterSetterRealTests.swift; sourceTree = "<group>"; };
 		03101A5228E3A17900F7E42D /* SortOrderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortOrderTests.swift; sourceTree = "<group>"; };
 		03101A5328E3A17900F7E42D /* SettingsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
-		03101A5428E3A17900F7E42D /* DictionaryGetterSetterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryGetterSetterTests.swift; sourceTree = "<group>"; };
+		03101A5428E3A17900F7E42D /* GetterSetterFakeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetterSetterFakeTests.swift; sourceTree = "<group>"; };
 		03101A5528E3A17900F7E42D /* BreedsURLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedsURLTests.swift; sourceTree = "<group>"; };
 		03101A5628E3A17900F7E42D /* BreedsLoaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedsLoaderTests.swift; sourceTree = "<group>"; };
 		03101A6028E3ADB400F7E42D /* BreedCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreedCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -150,16 +150,16 @@
 		0317D0D528E0F24900A4634C /* UsesAutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsesAutoLayout.swift; sourceTree = "<group>"; };
 		0317D0D628E0F24900A4634C /* NSCoderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSCoderExtension.swift; sourceTree = "<group>"; };
 		0317D0D728E0F24900A4634C /* URLProtocolStub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
-		0317D0D828E0F24900A4634C /* RealSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealSoundPlayer.swift; sourceTree = "<group>"; };
+		0317D0D828E0F24900A4634C /* SoundPlayerReal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayerReal.swift; sourceTree = "<group>"; };
 		0317D0D928E0F24900A4634C /* Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
-		0317D0DA28E0F24900A4634C /* TestSoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSoundPlayer.swift; sourceTree = "<group>"; };
+		0317D0DA28E0F24900A4634C /* SoundPlayerDummy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayerDummy.swift; sourceTree = "<group>"; };
 		0317D0DB28E0F24900A4634C /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		0317D0E728E0F52B00A4634C /* BreedsURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsURL.swift; sourceTree = "<group>"; };
 		0317D0E928E0F60F00A4634C /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		0317D0EB28E0F6A900A4634C /* SortOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOrder.swift; sourceTree = "<group>"; };
 		0317D0ED28E1017600A4634C /* GetterSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetterSetter.swift; sourceTree = "<group>"; };
-		0317D0EE28E1017600A4634C /* DictionaryGetterSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryGetterSetter.swift; sourceTree = "<group>"; };
-		0317D0EF28E1017600A4634C /* UserDefaultsGetterSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsGetterSetter.swift; sourceTree = "<group>"; };
+		0317D0EE28E1017600A4634C /* GetterSetterFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetterSetterFake.swift; sourceTree = "<group>"; };
+		0317D0EF28E1017600A4634C /* GetterSetterReal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetterSetterReal.swift; sourceTree = "<group>"; };
 		0317D0F328E101BE00A4634C /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0317D0F528E1028000A4634C /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		0317D0F728E102E600A4634C /* Abyssinian.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Abyssinian.jpg; sourceTree = "<group>"; };
@@ -292,15 +292,12 @@
 				0317D0C928E0EF6C00A4634C /* Breeds.swift */,
 				0317D0E728E0F52B00A4634C /* BreedsURL.swift */,
 				0365271628E10EB100C31BA4 /* BrowseBreedsDeleSource.swift */,
-				0317D0EE28E1017600A4634C /* DictionaryGetterSetter.swift */,
-				0317D0ED28E1017600A4634C /* GetterSetter.swift */,
 				03872D3028E1EE2600B99D5F /* License.swift */,
 				0365271428E10E5300C31BA4 /* LoadingState.swift */,
 				0317D0E928E0F60F00A4634C /* Settings.swift */,
 				0317D0EB28E0F6A900A4634C /* SortOrder.swift */,
 				0317D0FB28E1055000A4634C /* Sound.swift */,
 				03872D2E28E161BB00B99D5F /* Symbols.swift */,
-				0317D0EF28E1017600A4634C /* UserDefaultsGetterSetter.swift */,
 				0317D0CF28E0F1E800A4634C /* World.swift */,
 			);
 			path = Models;
@@ -324,13 +321,16 @@
 			children = (
 				0317D0CB28E0F05A00A4634C /* BreedsLoader.swift */,
 				0317D0DB28E0F24900A4634C /* Fonts.swift */,
+				0317D0ED28E1017600A4634C /* GetterSetter.swift */,
+				0317D0EE28E1017600A4634C /* GetterSetterFake.swift */,
+				0317D0EF28E1017600A4634C /* GetterSetterReal.swift */,
 				0365272228E1187600C31BA4 /* ImageCacheLoader.swift */,
 				0317D0D928E0F24900A4634C /* Layout.swift */,
 				0317D0D628E0F24900A4634C /* NSCoderExtension.swift */,
 				0317D0D128E0F24900A4634C /* NSLayoutConstraintExtension.swift */,
-				0317D0D828E0F24900A4634C /* RealSoundPlayer.swift */,
 				0317D0D328E0F24900A4634C /* SoundPlayer.swift */,
-				0317D0DA28E0F24900A4634C /* TestSoundPlayer.swift */,
+				0317D0DA28E0F24900A4634C /* SoundPlayerDummy.swift */,
+				0317D0D828E0F24900A4634C /* SoundPlayerReal.swift */,
 				0317D0D428E0F24900A4634C /* UIViewControllerExtension.swift */,
 				03872D3428E250E100B99D5F /* URLExtension.swift */,
 				0317D0D728E0F24900A4634C /* URLProtocolStub.swift */,
@@ -398,11 +398,9 @@
 			children = (
 				03101A5528E3A17900F7E42D /* BreedsURLTests.swift */,
 				03101A4F28E3A17900F7E42D /* BrowseBreedsDeleSourceTests.swift */,
-				03101A5428E3A17900F7E42D /* DictionaryGetterSetterTests.swift */,
 				03101A6F28E50E0000F7E42D /* LicenseTests.swift */,
 				03101A5328E3A17900F7E42D /* SettingsTests.swift */,
 				03101A5228E3A17900F7E42D /* SortOrderTests.swift */,
-				03101A5028E3A17900F7E42D /* UserDefaultsGetterSetterTests.swift */,
 				03101A4E28E3A17900F7E42D /* WorldTests.swift */,
 			);
 			path = Models;
@@ -412,10 +410,12 @@
 			isa = PBXGroup;
 			children = (
 				03101A5628E3A17900F7E42D /* BreedsLoaderTests.swift */,
+				03101A5428E3A17900F7E42D /* GetterSetterFakeTests.swift */,
+				03101A5028E3A17900F7E42D /* GetterSetterRealTests.swift */,
 				03101A3F28E39C9E00F7E42D /* ImageCacheLoaderTests.swift */,
 				03101A3E28E39C9E00F7E42D /* NSLayoutConstraintExtensionTests.swift */,
-				03101A4228E39C9E00F7E42D /* RealSoundPlayerTests.swift */,
-				03101A3C28E39C9E00F7E42D /* TestSoundPlayerTests.swift */,
+				03101A3C28E39C9E00F7E42D /* SoundPlayerDummyTests.swift */,
+				03101A4228E39C9E00F7E42D /* SoundPlayerRealTests.swift */,
 				03101A4028E39C9E00F7E42D /* UIViewControllerExtensionTests.swift */,
 				03101A4C28E39EAB00F7E42D /* URLExtensionTests.swift */,
 				03101A4328E39C9E00F7E42D /* URLProtocolStubTests.swift */,
@@ -596,7 +596,7 @@
 				0317D0C828E0EEE900A4634C /* Breed.swift in Sources */,
 				03872D2D28E1615600B99D5F /* SettingsCoordinator.swift in Sources */,
 				0317D0E828E0F52B00A4634C /* BreedsURL.swift in Sources */,
-				0317D0E328E0F24900A4634C /* RealSoundPlayer.swift in Sources */,
+				0317D0E328E0F24900A4634C /* SoundPlayerReal.swift in Sources */,
 				0365271B28E10F8900C31BA4 /* BreedDelegate.swift in Sources */,
 				0317D0F428E101BE00A4634C /* main.swift in Sources */,
 				0317D0CE28E0F15100A4634C /* MainTabBarVC.swift in Sources */,
@@ -607,11 +607,11 @@
 				0317D08928DFAA3B00A4634C /* AppDelegate.swift in Sources */,
 				0365271F28E1108F00C31BA4 /* BrowseBreedsView.swift in Sources */,
 				03872D2F28E161BB00B99D5F /* Symbols.swift in Sources */,
-				0317D0F228E1017600A4634C /* UserDefaultsGetterSetter.swift in Sources */,
+				0317D0F228E1017600A4634C /* GetterSetterReal.swift in Sources */,
 				0317D0F028E1017600A4634C /* GetterSetter.swift in Sources */,
 				0317D0D028E0F1E800A4634C /* World.swift in Sources */,
 				03872D2B28E1606E00B99D5F /* SettingsVC.swift in Sources */,
-				0317D0E528E0F24900A4634C /* TestSoundPlayer.swift in Sources */,
+				0317D0E528E0F24900A4634C /* SoundPlayerDummy.swift in Sources */,
 				0365271D28E10FFF00C31BA4 /* Coordinator.swift in Sources */,
 				0365271328E10DA400C31BA4 /* BrowseBreedsVC.swift in Sources */,
 				0365272328E1187600C31BA4 /* ImageCacheLoader.swift in Sources */,
@@ -620,7 +620,7 @@
 				0317D0EA28E0F60F00A4634C /* Settings.swift in Sources */,
 				0317D0E628E0F24900A4634C /* Fonts.swift in Sources */,
 				0317D08B28DFAA3B00A4634C /* SceneDelegate.swift in Sources */,
-				0317D0F128E1017600A4634C /* DictionaryGetterSetter.swift in Sources */,
+				0317D0F128E1017600A4634C /* GetterSetterFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,7 +630,7 @@
 			files = (
 				03101A5B28E3A17900F7E42D /* SortOrderTests.swift in Sources */,
 				03101A6528E3ADB500F7E42D /* SettingsCoordinatorTests.swift in Sources */,
-				03101A4A28E39C9E00F7E42D /* RealSoundPlayerTests.swift in Sources */,
+				03101A4A28E39C9E00F7E42D /* SoundPlayerRealTests.swift in Sources */,
 				03101A7028E50E0000F7E42D /* LicenseTests.swift in Sources */,
 				03101A6328E3ADB500F7E42D /* BreedCoordinatorTests.swift in Sources */,
 				03101A4528E39C9E00F7E42D /* UsesAutoLayoutTests.swift in Sources */,
@@ -641,7 +641,7 @@
 				03101A4628E39C9E00F7E42D /* NSLayoutConstraintExtensionTests.swift in Sources */,
 				03101A6B28E3B34600F7E42D /* BreedDetailViewTests.swift in Sources */,
 				03101A5E28E3A17900F7E42D /* BreedsURLTests.swift in Sources */,
-				03101A5D28E3A17900F7E42D /* DictionaryGetterSetterTests.swift in Sources */,
+				03101A5D28E3A17900F7E42D /* GetterSetterFakeTests.swift in Sources */,
 				03101A4728E39C9E00F7E42D /* ImageCacheLoaderTests.swift in Sources */,
 				03101A4928E39C9E00F7E42D /* URLSessionExtensionTests.swift in Sources */,
 				03101A5728E3A17900F7E42D /* WorldTests.swift in Sources */,
@@ -649,7 +649,7 @@
 				03872D3728E2AA4C00B99D5F /* BrowseBreedsVCTests.swift in Sources */,
 				0317D10628E107F600A4634C /* TestingSceneDelegate.swift in Sources */,
 				03872D3B28E35FB700B99D5F /* SettingsVCTests.swift in Sources */,
-				03101A4428E39C9E00F7E42D /* TestSoundPlayerTests.swift in Sources */,
+				03101A4428E39C9E00F7E42D /* SoundPlayerDummyTests.swift in Sources */,
 				03101A4D28E39EAB00F7E42D /* URLExtensionTests.swift in Sources */,
 				03101A5828E3A17900F7E42D /* BrowseBreedsDeleSourceTests.swift in Sources */,
 				03101A4B28E39C9E00F7E42D /* URLProtocolStubTests.swift in Sources */,
@@ -657,7 +657,7 @@
 				0317D10528E107F600A4634C /* TestingRootVC.swift in Sources */,
 				03101A6D28E3B34600F7E42D /* BrowseBreedsViewTests.swift in Sources */,
 				0317D10428E107F600A4634C /* TestingAppDelegate.swift in Sources */,
-				03101A5928E3A17900F7E42D /* UserDefaultsGetterSetterTests.swift in Sources */,
+				03101A5928E3A17900F7E42D /* GetterSetterRealTests.swift in Sources */,
 				03101A5C28E3A17900F7E42D /* SettingsTests.swift in Sources */,
 				03872D3928E2ABFD00B99D5F /* BreedDetailVCTests.swift in Sources */,
 			);

@@ -6,10 +6,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   var window: UIWindow?
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-    #if targetEnvironment(simulator)
-    Current = World.simulator
-    #endif
-
     guard let windowScene = scene as? UIWindowScene else {
       fatalError("Could not cast scene to UIWindowScene.")
     }
@@ -31,4 +27,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   func sceneDidEnterBackground(_ scene: UIScene) {}
 }
 
-var Current = World.device
+var Current = World.production
