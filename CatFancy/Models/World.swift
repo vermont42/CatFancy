@@ -3,11 +3,21 @@
 
 import Foundation
 
+var Current = World.chooseWorld()
+
 struct World {
   var settings: Settings
   var session: URLSession
   var soundPlayer: SoundPlayer
   var getterSetter: GetterSetter
+
+  static func chooseWorld() -> World {
+    if NSClassFromString("XCTest") != nil {
+      return World.unitTest
+    } else {
+      return World.production
+    }
+  }
 
   static let production: World = {
     let getterSetter = GetterSetterReal()
