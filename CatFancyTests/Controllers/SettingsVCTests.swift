@@ -28,6 +28,18 @@ class SettingsVCTests: XCTestCase {
     breedsURLControl.sendActions(for: .valueChanged)
     XCTAssertEqual(Current.settings.breedsURL, BreedsURL.standard)
 
+    Current.settings.sessionType = .shared
+    XCTAssertEqual(Current.settings.sessionType, SessionType.shared)
+    let sessionTypeControl = svc.settingsView.sessionTypeControl
+
+    sessionTypeControl.selectedSegmentIndex = 1
+    sessionTypeControl.sendActions(for: .valueChanged)
+    XCTAssertEqual(Current.settings.sessionType, SessionType.stub)
+
+    sessionTypeControl.selectedSegmentIndex = 0
+    sessionTypeControl.sendActions(for: .valueChanged)
+    XCTAssertEqual(Current.settings.sessionType, SessionType.shared)
+
     Current.settings.sortOrder = .name
     XCTAssertEqual(Current.settings.sortOrder, SortOrder.name)
     let sortOrderControl = svc.settingsView.sortOrderControl

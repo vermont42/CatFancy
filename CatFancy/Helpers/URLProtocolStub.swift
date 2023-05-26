@@ -4,11 +4,11 @@ import Foundation
 
 class URLProtocolStub: URLProtocol {
   override class func canInit(with request: URLRequest) -> Bool {
-    return true
+    true
   }
 
   override class func canonicalRequest(for request: URLRequest) -> URLRequest {
-    return request
+    request
   }
 
   override func startLoading() {

@@ -94,6 +94,25 @@
 		03872D3928E2ABFD00B99D5F /* BreedDetailVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03872D3828E2ABFD00B99D5F /* BreedDetailVCTests.swift */; };
 		03872D3B28E35FB700B99D5F /* SettingsVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03872D3A28E35FB700B99D5F /* SettingsVCTests.swift */; };
 		03872D3D28E360F000B99D5F /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03872D3C28E360F000B99D5F /* AppDelegateTests.swift */; };
+		03F3E83F2A2104760075D979 /* MaineCoon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E82D2A2104750075D979 /* MaineCoon.jpg */; };
+		03F3E8402A2104760075D979 /* Balinese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E82E2A2104750075D979 /* Balinese.jpg */; };
+		03F3E8412A2104760075D979 /* Ragdoll.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E82F2A2104750075D979 /* Ragdoll.jpg */; };
+		03F3E8422A2104760075D979 /* Serval.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E8302A2104750075D979 /* Serval.jpg */; };
+		03F3E8432A2104760075D979 /* CloudedLeopard.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E8312A2104750075D979 /* CloudedLeopard.jpg */; };
+		03F3E8442A2104760075D979 /* Manx.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E8322A2104750075D979 /* Manx.jpg */; };
+		03F3E8452A2104760075D979 /* Burmese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E8332A2104760075D979 /* Burmese.jpg */; };
+		03F3E8462A2104760075D979 /* TurkishAngora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E8342A2104760075D979 /* TurkishAngora.jpg */; };
+		03F3E8472A2104760075D979 /* Smilodon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E8352A2104760075D979 /* Smilodon.jpg */; };
+		03F3E8482A2104760075D979 /* Savannah.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E8362A2104760075D979 /* Savannah.jpg */; };
+		03F3E8492A2104760075D979 /* Van.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E8372A2104760075D979 /* Van.jpg */; };
+		03F3E84A2A2104760075D979 /* Bengal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E8382A2104760075D979 /* Bengal.jpg */; };
+		03F3E84B2A2104760075D979 /* Sand.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E8392A2104760075D979 /* Sand.jpg */; };
+		03F3E84C2A2104760075D979 /* DevonRex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E83A2A2104760075D979 /* DevonRex.jpg */; };
+		03F3E84D2A2104760075D979 /* Siamese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E83B2A2104760075D979 /* Siamese.jpg */; };
+		03F3E84E2A2104760075D979 /* Tonkinese.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E83C2A2104760075D979 /* Tonkinese.jpg */; };
+		03F3E84F2A2104760075D979 /* EuropeanWildcat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E83D2A2104760075D979 /* EuropeanWildcat.jpg */; };
+		03F3E8502A2104760075D979 /* RussianBlue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 03F3E83E2A2104760075D979 /* RussianBlue.jpg */; };
+		03F3E8522A2114120075D979 /* FontsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3E8512A2114120075D979 /* FontsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +216,25 @@
 		03872D3828E2ABFD00B99D5F /* BreedDetailVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailVCTests.swift; sourceTree = "<group>"; };
 		03872D3A28E35FB700B99D5F /* SettingsVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVCTests.swift; sourceTree = "<group>"; };
 		03872D3C28E360F000B99D5F /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		03F3E82D2A2104750075D979 /* MaineCoon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MaineCoon.jpg; sourceTree = "<group>"; };
+		03F3E82E2A2104750075D979 /* Balinese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Balinese.jpg; sourceTree = "<group>"; };
+		03F3E82F2A2104750075D979 /* Ragdoll.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ragdoll.jpg; sourceTree = "<group>"; };
+		03F3E8302A2104750075D979 /* Serval.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Serval.jpg; sourceTree = "<group>"; };
+		03F3E8312A2104750075D979 /* CloudedLeopard.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CloudedLeopard.jpg; sourceTree = "<group>"; };
+		03F3E8322A2104750075D979 /* Manx.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Manx.jpg; sourceTree = "<group>"; };
+		03F3E8332A2104760075D979 /* Burmese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Burmese.jpg; sourceTree = "<group>"; };
+		03F3E8342A2104760075D979 /* TurkishAngora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TurkishAngora.jpg; sourceTree = "<group>"; };
+		03F3E8352A2104760075D979 /* Smilodon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Smilodon.jpg; sourceTree = "<group>"; };
+		03F3E8362A2104760075D979 /* Savannah.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Savannah.jpg; sourceTree = "<group>"; };
+		03F3E8372A2104760075D979 /* Van.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Van.jpg; sourceTree = "<group>"; };
+		03F3E8382A2104760075D979 /* Bengal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Bengal.jpg; sourceTree = "<group>"; };
+		03F3E8392A2104760075D979 /* Sand.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Sand.jpg; sourceTree = "<group>"; };
+		03F3E83A2A2104760075D979 /* DevonRex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DevonRex.jpg; sourceTree = "<group>"; };
+		03F3E83B2A2104760075D979 /* Siamese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Siamese.jpg; sourceTree = "<group>"; };
+		03F3E83C2A2104760075D979 /* Tonkinese.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tonkinese.jpg; sourceTree = "<group>"; };
+		03F3E83D2A2104760075D979 /* EuropeanWildcat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EuropeanWildcat.jpg; sourceTree = "<group>"; };
+		03F3E83E2A2104760075D979 /* RussianBlue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RussianBlue.jpg; sourceTree = "<group>"; };
+		03F3E8512A2114120075D979 /* FontsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,11 +347,11 @@
 		0317D0BB28DFAB4700A4634C /* MockData */ = {
 			isa = PBXGroup;
 			children = (
-				0317D0F728E102E600A4634C /* Abyssinian.jpg */,
 				03872D2428E15D5E00B99D5F /* breeds_empty.json */,
 				03872D2228E15D5E00B99D5F /* breeds_malformed.json */,
 				03872D2328E15D5E00B99D5F /* breeds_with_more.json */,
 				0317D0F928E102FD00A4634C /* breeds.json */,
+				03F3E82C2A2103F40075D979 /* CatImages */,
 				0317D0F528E1028000A4634C /* MockData.swift */,
 			);
 			path = MockData;
@@ -413,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				03101A5628E3A17900F7E42D /* BreedsLoaderTests.swift */,
+				03F3E8512A2114120075D979 /* FontsTests.swift */,
 				03101A5428E3A17900F7E42D /* GetterSetterFakeTests.swift */,
 				03101A5028E3A17900F7E42D /* GetterSetterRealTests.swift */,
 				03101A3F28E39C9E00F7E42D /* ImageCacheLoaderTests.swift */,
@@ -447,6 +486,32 @@
 				03872D3A28E35FB700B99D5F /* SettingsVCTests.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		03F3E82C2A2103F40075D979 /* CatImages */ = {
+			isa = PBXGroup;
+			children = (
+				0317D0F728E102E600A4634C /* Abyssinian.jpg */,
+				03F3E82E2A2104750075D979 /* Balinese.jpg */,
+				03F3E8382A2104760075D979 /* Bengal.jpg */,
+				03F3E8332A2104760075D979 /* Burmese.jpg */,
+				03F3E8312A2104750075D979 /* CloudedLeopard.jpg */,
+				03F3E83A2A2104760075D979 /* DevonRex.jpg */,
+				03F3E83D2A2104760075D979 /* EuropeanWildcat.jpg */,
+				03F3E82D2A2104750075D979 /* MaineCoon.jpg */,
+				03F3E8322A2104750075D979 /* Manx.jpg */,
+				03F3E82F2A2104750075D979 /* Ragdoll.jpg */,
+				03F3E83E2A2104760075D979 /* RussianBlue.jpg */,
+				03F3E8392A2104760075D979 /* Sand.jpg */,
+				03F3E8362A2104760075D979 /* Savannah.jpg */,
+				03F3E8302A2104750075D979 /* Serval.jpg */,
+				03F3E83B2A2104760075D979 /* Siamese.jpg */,
+				03F3E8352A2104760075D979 /* Smilodon.jpg */,
+				03F3E83C2A2104760075D979 /* Tonkinese.jpg */,
+				03F3E8342A2104760075D979 /* TurkishAngora.jpg */,
+				03F3E8372A2104760075D979 /* Van.jpg */,
+			);
+			path = CatImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -532,12 +597,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				03872D2728E15D5E00B99D5F /* breeds_empty.json in Resources */,
+				03F3E84D2A2104760075D979 /* Siamese.jpg in Resources */,
 				03872D2528E15D5E00B99D5F /* breeds_malformed.json in Resources */,
+				03F3E8442A2104760075D979 /* Manx.jpg in Resources */,
+				03F3E8492A2104760075D979 /* Van.jpg in Resources */,
 				0317D09528DFAA3C00A4634C /* LaunchScreen.storyboard in Resources */,
+				03F3E8482A2104760075D979 /* Savannah.jpg in Resources */,
+				03F3E8462A2104760075D979 /* TurkishAngora.jpg in Resources */,
 				0317D0FA28E102FD00A4634C /* breeds.json in Resources */,
 				0317D09228DFAA3C00A4634C /* Assets.xcassets in Resources */,
+				03F3E8502A2104760075D979 /* RussianBlue.jpg in Resources */,
 				0317D10028E1059100A4634C /* sadTrombone.mp3 in Resources */,
+				03F3E8472A2104760075D979 /* Smilodon.jpg in Resources */,
+				03F3E84A2A2104760075D979 /* Bengal.jpg in Resources */,
 				0317D0FF28E1059100A4634C /* chime.mp3 in Resources */,
+				03F3E8422A2104760075D979 /* Serval.jpg in Resources */,
+				03F3E84E2A2104760075D979 /* Tonkinese.jpg in Resources */,
+				03F3E8412A2104760075D979 /* Ragdoll.jpg in Resources */,
+				03F3E83F2A2104760075D979 /* MaineCoon.jpg in Resources */,
+				03F3E8432A2104760075D979 /* CloudedLeopard.jpg in Resources */,
+				03F3E84C2A2104760075D979 /* DevonRex.jpg in Resources */,
+				03F3E8402A2104760075D979 /* Balinese.jpg in Resources */,
+				03F3E84F2A2104760075D979 /* EuropeanWildcat.jpg in Resources */,
+				03F3E8452A2104760075D979 /* Burmese.jpg in Resources */,
+				03F3E84B2A2104760075D979 /* Sand.jpg in Resources */,
 				0317D0F828E102E600A4634C /* Abyssinian.jpg in Resources */,
 				03872D2628E15D5E00B99D5F /* breeds_with_more.json in Resources */,
 			);
@@ -647,6 +730,7 @@
 				03101A5E28E3A17900F7E42D /* BreedsURLTests.swift in Sources */,
 				03101A5D28E3A17900F7E42D /* GetterSetterFakeTests.swift in Sources */,
 				03101A4728E39C9E00F7E42D /* ImageCacheLoaderTests.swift in Sources */,
+				03F3E8522A2114120075D979 /* FontsTests.swift in Sources */,
 				03101A4928E39C9E00F7E42D /* URLSessionExtensionTests.swift in Sources */,
 				03101A5728E3A17900F7E42D /* WorldTests.swift in Sources */,
 				03101A6428E3ADB500F7E42D /* MainTabBarVCTests.swift in Sources */,
