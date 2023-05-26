@@ -7,10 +7,10 @@ class SettingsTests: XCTestCase {
   func testBreedsURLSetting() {
     let settings = Settings(getterSetter: GetterSetterFake())
     XCTAssertEqual(Settings.breedsURLDefault, settings.breedsURL)
-    XCTAssertEqual(BreedsURL.standard, settings.breedsURL)
-    settings.breedsURL = .withMore
-    XCTAssertNotEqual(Settings.breedsURLDefault, settings.breedsURL)
     XCTAssertEqual(BreedsURL.withMore, settings.breedsURL)
+    settings.breedsURL = .standard
+    XCTAssertNotEqual(Settings.breedsURLDefault, settings.breedsURL)
+    XCTAssertEqual(BreedsURL.standard, settings.breedsURL)
     Current.settings.breedsURL = Settings.breedsURLDefault
   }
 

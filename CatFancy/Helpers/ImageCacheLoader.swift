@@ -15,7 +15,7 @@ class ImageCacheLoader {
       return image
     } else {
       do {
-        let (data, _) = try await Current.session.data(from: url)
+        let (data, _) = try await Current.settings.sessionType.session.data(from: url)
         let image = UIImage(data: data)
         if let image {
           shared.cache.setObject(image, forKey: url.absoluteString as NSString)

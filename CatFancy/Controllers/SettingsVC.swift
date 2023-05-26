@@ -14,8 +14,24 @@ class SettingsVC: UIViewController {
   override func loadView() {
     view = SettingsView(frame: UIScreen.main.bounds)
     title = "Settings"
-    settingsView.breedsURLControl.addTarget(self, action: #selector(SettingsVC.breedsURLChanged(_:)), for: .valueChanged)
-    settingsView.sortOrderControl.addTarget(self, action: #selector(SettingsVC.sortOrderChanged(_:)), for: .valueChanged)
+
+    settingsView.breedsURLControl.addTarget(
+      self,
+      action: #selector(SettingsVC.breedsURLChanged(_:)),
+      for: .valueChanged
+    )
+
+    settingsView.sessionTypeControl.addTarget(
+      self,
+      action: #selector(SettingsVC.sessionTypeChanged(_:)),
+      for: .valueChanged
+    )
+
+    settingsView.sortOrderControl.addTarget(
+      self,
+      action: #selector(SettingsVC.sortOrderChanged(_:)),
+      for: .valueChanged
+    )
   }
 
   override func viewDidLoad() {
@@ -33,6 +49,13 @@ class SettingsVC: UIViewController {
       settingsView.breedsURLControl.selectedSegmentIndex = 2
     case .withMore:
       settingsView.breedsURLControl.selectedSegmentIndex = 3
+    }
+
+    switch Current.settings.sessionType {
+    case .shared:
+      settingsView.sessionTypeControl.selectedSegmentIndex = 0
+    case .stub:
+      settingsView.sessionTypeControl.selectedSegmentIndex = 1
     }
 
     switch Current.settings.sortOrder {
@@ -53,6 +76,15 @@ class SettingsVC: UIViewController {
       Current.settings.breedsURL = .malformed
     } else if index == 3 {
       Current.settings.breedsURL = .withMore
+    }
+  }
+
+  @objc func sessionTypeChanged(_ sender: UISegmentedControl) {
+    let index = settingsView.sessionTypeControl.selectedSegmentIndex
+    if index == 0 {
+      Current.settings.sessionType = .shared
+    } else if index == 1 {
+      Current.settings.sessionType = .stub
     }
   }
 

@@ -7,9 +7,12 @@ var Current = World.chooseWorld()
 
 struct World {
   var settings: Settings
-  var session: URLSession
   var soundPlayer: SoundPlayer
-  var getterSetter: GetterSetter
+
+  init(settings: Settings, soundPlayer: SoundPlayer) {
+    self.settings = settings
+    self.soundPlayer = soundPlayer
+  }
 
   static func chooseWorld() -> World {
     if NSClassFromString("XCTest") != nil {
@@ -20,22 +23,16 @@ struct World {
   }
 
   static let production: World = {
-    let getterSetter = GetterSetterReal()
-    return World(
-      settings: Settings(getterSetter: getterSetter),
-      session: URLSession.shared,
-      soundPlayer: SoundPlayerReal(),
-      getterSetter: getterSetter
+    World(
+      settings: Settings(getterSetter: GetterSetterReal()),
+      soundPlayer: SoundPlayerReal()
     )
   }()
 
   static let unitTest: World = {
-    let getterSetter = GetterSetterFake()
-    return World(
-      settings: Settings(getterSetter: getterSetter),
-      session: URLSession.stubSession,
-      soundPlayer: SoundPlayerDummy(),
-      getterSetter: getterSetter
+    World(
+      settings: Settings(getterSetter: GetterSetterFake()),
+      soundPlayer: SoundPlayerDummy()
     )
   }()
 }

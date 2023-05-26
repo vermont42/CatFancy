@@ -1,7 +1,5 @@
 // Created by Josh Adams, who holds the copyright and reserves all rights, on 9/24/22.
 
-import Foundation
-
 class Settings {
   let getterSetter: GetterSetter
 
@@ -13,7 +11,17 @@ class Settings {
     }
   }
   static let breedsURLKey = "breedsURL"
-  static let breedsURLDefault: BreedsURL = .standard
+  static let breedsURLDefault: BreedsURL = .withMore
+
+  var sessionType: SessionType {
+    didSet {
+      if sessionType != oldValue {
+        getterSetter.set(key: Settings.sessionTypeKey, value: sessionType.rawValue)
+      }
+    }
+  }
+  static let sessionTypeKey = "sessionType"
+  static let sessionTypeDefault: SessionType = .shared
 
   var sortOrder: SortOrder {
     didSet {
@@ -33,6 +41,13 @@ class Settings {
     } else {
       breedsURL = Settings.breedsURLDefault
       getterSetter.set(key: Settings.breedsURLKey, value: breedsURL.rawValue)
+    }
+
+    if let sessionTypeString = getterSetter.get(key: Settings.sessionTypeKey) {
+      sessionType = SessionType(rawValue: sessionTypeString) ?? Settings.sessionTypeDefault
+    } else {
+      sessionType = Settings.sessionTypeDefault
+      getterSetter.set(key: Settings.sessionTypeKey, value: sessionType.rawValue)
     }
 
     if let sortOrderString = getterSetter.get(key: Settings.sortOrderKey) {
