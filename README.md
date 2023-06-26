@@ -11,7 +11,7 @@ CatFancy
 
 ## Introduction
 
-CatFancy is an iOS app that demonstrates iOS-development techniques. Users can browse breeds of cats with images from various sources and breed info from Wikipedia. I created CatFancy to accompany a [blog post](https://racecondition.software/blog/challenges/) about iOS-developer coding challenges.
+CatFancy is an iOS app that demonstrates iOS-development techniques. Users can browse breeds of cats with images from various sources and breed info from Wikipedia. CatFancy accompanies a [blog post](https://racecondition.software/blog/challenges/) about UIKit iOS-developer coding challenges.
 
 ## Build Tools & Versions Used
 
