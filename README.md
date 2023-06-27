@@ -47,9 +47,9 @@ My research indicates that this warning is [harmless](https://en.wikipedia.org/w
 | -------- | ------- |
 | ![](img/browse.png) | ![](img/details.png) |
 
-| Settings | Splash |
+| Settings | Launch |
 | -------- | ------- |
-| ![](img/settings.png) | ![](img/splash.png) |
+| ![](img/settings.png) | ![](img/launch.png) |
 
 ## Credits
 
